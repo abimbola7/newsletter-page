@@ -24,13 +24,19 @@ const Loading = (props) => {
 
 const Input = React.forwardRef(
   (props, ref) => {
+    const [error, setError] = useState("")
     const [formIsValid, setFormIsValid] = useState(true)
-  
     const formHandler = (e) => {
       setFormIsValid(true)
       e.preventDefault()
-      if (!ref.current.value.includes("@")) {
+      if (ref.current.value === "") {
+        setFormIsValid(false);
+        setError("Input can't be left blank")
+        return;
+      }
+      else if (!ref.current.value.includes("@")) {
         setFormIsValid(false)  
+        setError("Please enter a valid email address");
         return;
       }
       props.handler()
@@ -46,7 +52,7 @@ const Input = React.forwardRef(
           <div className="flex text-xs justify-between">
             <label htmlFor="email">Email address</label>
             {
-              !formIsValid && <p className={'text-tomato'}>Valid email required</p>
+              !formIsValid && <p className={'text-tomato'}>{error}</p>
             }
           </div>
           <input 

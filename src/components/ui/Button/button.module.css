@@ -2,7 +2,8 @@
   transition: .4s all ease-out;
 }
 
-.button__gradient:hover
+.button__gradient:hover,
+.button__gradient:focus
 { 
   transition: .4s all ease-out;
   background: linear-gradient(to right, hsl(350, 92%, 65%),rgb(240, 92, 23));
