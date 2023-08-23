@@ -30,9 +30,9 @@ Users should be able to:
 
 ![desktop](./src/design/destop_main.png)
 ![desktop](./src/design/desktop_active.png)
-![desktop](./src/design/desktop_success.png)
+![desktop](./src/design/desktop_succ.png)
 ![mobile](./src//design//mobile.png)
-![mobile](./src/design/mobile_success.png)
+![mobile](./src/design/mobile_succc.png)
 
 ### Links
 
