@@ -1,0 +1,10 @@
+.button__gradient {
+  transition: .4s all ease-out;
+}
+
+.button__gradient:hover
+{ 
+  transition: .4s all ease-out;
+  background: linear-gradient(to right, hsl(350, 92%, 65%),rgb(240, 92, 23));
+  box-shadow: 0px 4px 10px 3px hsl(350, 92%, 85%);
+}
